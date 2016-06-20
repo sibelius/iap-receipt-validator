@@ -1,7 +1,7 @@
 {
   "name": "iap-receipt-validator",
   "description": "Validates In App Purchases receipts on App Store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Sibelius Seraphini <sibeliusseraphini@gmail.com>",
   "bugs": {
     "url": "https://github.com/sibelius/iap-receipt-validator/issues"
