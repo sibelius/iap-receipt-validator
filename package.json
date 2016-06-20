@@ -1,0 +1,43 @@
+{
+  "name": "iap-receipt-validator",
+  "description": "Validates In App Purchases receipts on App Store",
+  "version": "1.0.0",
+  "author": "Sibelius Seraphini <sibeliusseraphini@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sibelius/iap-receipt-validator/issues"
+  },
+  "dependencies": {
+    "babel-preset-stage-0": "^6.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/sibelius/iap-receipt-validator#readme",
+  "keywords": [
+    "app store",
+    "fetch",
+    "iap",
+    "receipt",
+    "validation"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sibelius/iap-receipt-validator"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "lint": "eslint .",
+    "prepublish": "npm run build",
+    "start": "babel-node src/index.js",
+    "test": "mocha --compilers js:babel-register"
+  }
+}
