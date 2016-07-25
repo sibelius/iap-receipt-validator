@@ -24,7 +24,7 @@ export default function(password, production=true) {
 
   return async (receipt) => {
     const payload = {
-      'receipt-data': receipt + 'test',
+      'receipt-data': receipt,
       password,
     };
 
