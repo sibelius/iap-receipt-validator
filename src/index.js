@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 
-const fetch = typeof window === 'object' ? window.fetch : global.fetch;
+const fetch = window === 'object' ? window.fetch : global.fetch;
 
 if (!fetch)
   throw new Error(
