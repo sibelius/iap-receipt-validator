@@ -1,23 +1,23 @@
 {
   "name": "iap-receipt-validator",
   "description": "Validates In App Purchases receipts on App Store",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "author": "Sibelius Seraphini <sibeliusseraphini@gmail.com>",
   "bugs": {
     "url": "https://github.com/sibelius/iap-receipt-validator/issues"
   },
   "dependencies": {
-    "babel-polyfill": "^6.9.1",
-    "babel-preset-stage-0": "^6.5.0"
+    "babel-preset-react-native-stage-0": "^1.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-register": "^6.9.0",
-    "chai": "^3.5.0",
-    "mocha": "^2.5.3"
-  },
-  "directories": {
-    "test": "test"
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^18.0.0",
+    "jest-cli": "^18.0.0"
   },
   "homepage": "https://github.com/sibelius/iap-receipt-validator#readme",
   "keywords": [
@@ -38,6 +38,6 @@
     "lint": "eslint .",
     "prepublish": "npm run build",
     "start": "babel-node src/index.js",
-    "test": "mocha --compilers js:babel-register"
+    "test": "jest --coverage --runInBand --forceExit"
   }
 }
