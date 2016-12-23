@@ -57,7 +57,7 @@ export default function(password, production=true) {
       throw new VerificationError(statusCodes[body.status]);
     }
 
-    return receipt;
+    return body;
   }
 }
 
