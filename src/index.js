@@ -8,7 +8,7 @@ const statusCodes = {
   [21003]: { message: 'Receipt not authenticated', valid: false, error: true },
   [21004]: { message: 'Shared secret does not match', valid: false, error: true },
   [21005]: { message: 'Receipt server unavailable', valid: false, error: true },
-  [21006]: { message: 'Receipt valid but sub expired', valid: false, error: false },
+  [21006]: { message: 'Receipt valid but sub expired', valid: true, error: false },
   /**
    * special case for app review handling - forward any request that is intended for the Sandbox but was sent to
    * Production, this is what the app review team does
@@ -43,7 +43,7 @@ export default function (password, production = true) {
     const res = await fetch(verifyUrl, options);
     const body = await res.json();
 
-    if (body.status !== 0) {
+    if (body.status !== 0 && body.status !== 21006) {
       throw new VerificationError(statusCodes[body.status]);
     }
 
