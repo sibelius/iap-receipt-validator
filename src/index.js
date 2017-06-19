@@ -43,7 +43,7 @@ export default function (password, production = true) {
     const res = await fetch(verifyUrl, options);
     const body = await res.json();
 
-    if (body.status !== 0) {
+    if (body.status !== 0 && body.status !== 21006) {
       throw new VerificationError(statusCodes[body.status]);
     }
 
