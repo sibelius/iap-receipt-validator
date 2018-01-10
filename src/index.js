@@ -36,7 +36,7 @@ export default function (password, production = true) {
       body: JSON.stringify(payload),
       method: 'POST',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
       },
     };
 
