@@ -14,8 +14,8 @@ npm i --save iap-receipt-validator
 import iapReceiptValidator from 'iap-receipt-validator';
 
 const password = 'b212549818ff42ecb65aa45c'; // Shared Secret from iTunes connect
-const production = false; // use sandbox or production url for validation
-const validateReceipt = iapReceiptValidator(password, production);
+const isProduction = false; // true = prod, false = sandbox
+const validateReceipt = iapReceiptValidator(password, isProduction);
 
 async validate(receiptData) {
     try {
